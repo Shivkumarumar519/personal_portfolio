@@ -469,5 +469,20 @@ footer p {
       #msg{
         color: red;
       }
+.theme-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark .theme-btn {
+  --btn-bg: #f0f0f0;
+  --btn-text: #121212;
+}
 
 
