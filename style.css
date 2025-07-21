@@ -479,10 +479,14 @@ footer p {
   font-weight: 500;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-body.dark .theme-btn {
-  --btn-bg: #f0f0f0;
-  --btn-text: #121212;
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
+/* Dark Theme styles */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
