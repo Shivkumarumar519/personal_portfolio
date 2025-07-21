@@ -469,3 +469,34 @@ footer p {
       #msg{
         color: red;
       }
+
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --btn-bg: #007bff;
+  --btn-text: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Dark Theme */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --btn-bg: #f0f0f0;
+  --btn-text: #121212;
+}
