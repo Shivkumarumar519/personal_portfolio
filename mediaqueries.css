@@ -111,7 +111,10 @@
         font-size: 18px;
         border-radius: 6px;
     }
-     @media screen and (max-width: 600px) {
+     
+  }
+
+  @media screen and (max-width: 600px) {
         /* Media Queries for Contact Form */
         #contact-form form {
           padding: 1rem;
@@ -121,4 +124,28 @@
           width: 100%;
         }
       }
+
+      @media (max-width: 900px) {
+  #projects .about-containers {
+    grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 900px) {
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .section__pic-container {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+  .section__pic-container img {
+    width: 200px;
+    height: 200px;
+  }
+}
