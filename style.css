@@ -333,13 +333,20 @@ section {
   flex-direction: column;
 }
 
+
+
 .article-container {
   display: flex;
-  text-align: initial;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about-containers {
   flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 article {
@@ -365,11 +372,30 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 200px; /* Adjust height */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project-img:hover {
+  transform: scale(1.1);
+}
+
+
+.details-container.color-container {
+  border-color: rgb(163, 163, 163);
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+}
+.details-container.color-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 .project-title {
   margin: 1rem;
   color: black;
@@ -470,77 +496,4 @@ footer p {
         color: red;
       }
 
-/* Add these styles to your CSS file */
 
-/* PROJECTS SECTION IMPROVEMENTS */
-.details-container.color-container {
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.details-container.color-container:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-}
-
-.project-img {
-  border-radius: 2rem;
-  width: 100%;
-  height: 250px; /* Fixed height for consistency */
-  object-fit: cover; /* Ensures images maintain aspect ratio */
-  transition: transform 0.3s ease;
-}
-
-.details-container.color-container:hover .project-img {
-  transform: scale(1.05);
-}
-
-.project-title {
-  margin: 1rem;
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-/* Adjust project container sizing */
-.about-containers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  width: 100%;
-}
-
-.details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-  min-height: 450px; /* Minimum height for all project cards */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Button hover effects */
-.project-btn {
-  transition: all 0.3s ease;
-  border: 2px solid rgb(163, 163, 163);
-  background: white;
-  color: black;
-  padding: 0.8rem 1.5rem;
-  border-radius: 2rem;
-  font-weight: 600;
-  margin: 0.5rem;
-}
-
-.project-btn:hover {
-  background: rgb(53, 53, 53);
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
