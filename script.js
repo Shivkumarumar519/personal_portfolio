@@ -8,14 +8,20 @@ function toggleMenu() {
 
 const toggleBtn = document.getElementById("theme-toggle");
 
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-
-  // Change button text based on current mode
-  if (document.body.classList.contains("dark")) {
+  // Load theme from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
     toggleBtn.textContent = "☀️ Light Mode";
-  } else {
-    toggleBtn.textContent = "🌙 Dark Mode";
   }
-});
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    const isDark = document.body.classList.contains("dark");
+
+    // Save theme
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    // Update button text
+    toggleBtn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+  });
 
