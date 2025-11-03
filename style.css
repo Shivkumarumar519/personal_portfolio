@@ -210,25 +210,9 @@ section {
   text-align: center;
 }
 
-.typing {
-    display: inline-block;
-    color: #e67e22;
-    font-weight: bold;
-    border-right: 3px solid #e67e22;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 2.5s steps(4) infinite alternate,
-               blink 0.6s step-end infinite alternate;
-  }
 
-  @keyframes typing {
-    0% { width: 0ch; }
-    100% { width: 4ch; } /* Shiv = 4 letters */
-  }
 
-  @keyframes blink {
-    50% { border-color: transparent; }
-  }
+  
 
 
 
